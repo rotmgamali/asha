@@ -1,0 +1,14 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 100 100" fill="none">
+  <!-- Gold Sun/Halo -->
+  <circle cx="50" cy="50" r="45" stroke="#D4AF37" stroke-width="2" opacity="0.5"/>
+  
+  <!-- Stylized Bamboo/Lotus Hybrid -->
+  <path d="M50 20 C60 35 80 40 80 60 C80 80 60 85 50 90 C40 85 20 80 20 60 C20 40 40 35 50 20 Z" fill="#A52A2A" stroke="#D4AF37" stroke-width="1.5"/>
+  
+  <!-- Inner Detail (Leaf veins / Flame) -->
+  <path d="M50 30 C55 45 60 55 50 80 C40 55 45 45 50 30" fill="#D4AF37" opacity="0.8"/>
+  
+  <!-- Bamboo Stems Hints -->
+  <path d="M25 60 Q30 65 35 60" stroke="#556B2F" stroke-width="2" stroke-linecap="round"/>
+  <path d="M65 60 Q70 65 75 60" stroke="#556B2F" stroke-width="2" stroke-linecap="round"/>
+</svg>
