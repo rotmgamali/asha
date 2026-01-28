@@ -974,3 +974,107 @@ a {
 .delay-1 {
     transition-delay: 0.2s;
 }
+/* Map Embed */
+.map-embed-container {
+    max-width: 1400px; margin: 0 auto 4rem;
+    position: relative;
+    border: 1px solid var(--accent-gold);
+    padding: 10px;
+}
+.map-border-overlay {
+    position: absolute; top: 0; left: 0; width: 100%; height: 100%;
+    pointer-events: none;
+    border: 1px dashed rgba(197, 160, 89, 0.5);
+    margin: -5px;
+}
+
+/* Magazine Menu Styles */
+.menu-content.magazine-style {
+    max-width: 1200px;
+    padding: 4rem 1rem;
+}
+.menu-section {
+    margin-bottom: 5rem;
+}
+.section-title {
+    display: flex; align-items: center; gap: 1rem; margin-bottom: 2rem;
+}
+.section-title h3 {
+    font-family: var(--font-header); font-size: 2.5rem; color: var(--accent-red);
+    white-space: nowrap;
+}
+.section-title .line {
+    height: 1px; width: 100%; background: var(--accent-gold); opacity: 0.5;
+}
+
+/* Starters Grid */
+.starters-grid {
+    display: grid; grid-template-columns: repeat(3, 1fr); gap: 2rem;
+}
+.starter-card {
+    text-align: center;
+}
+.dish-thumb {
+    width: 100%; height: 200px;
+    border-radius: 50% 50% 0 0; /* Arch shape */
+    background-size: cover; background-position: center;
+    border: 1px solid var(--accent-gold);
+    margin-bottom: 1rem;
+}
+.dish-info h4 { font-family: var(--font-header); font-size: 1.25rem; margin-bottom: 0.5rem; }
+.dish-info p { font-size: 0.9rem; margin-bottom: 0.5rem; opacity: 0.8; }
+
+/* Curry Section (Hero) */
+.curry-section {
+    display: grid; grid-template-columns: 1fr 1.5fr; gap: 3rem;
+}
+.curry-hero-image {
+    height: 500px; background-size: cover; background-position: center;
+    border: 1px solid var(--accent-gold);
+    position: relative;
+}
+.image-label {
+    position: absolute; bottom: 1rem; left: 1rem;
+    background: white; padding: 0.5rem 1rem;
+    font-family: var(--font-header); font-weight: 700;
+}
+.clean-list { list-style: none; }
+.clean-list li {
+    margin-bottom: 1.5rem; padding-bottom: 1rem;
+    border-bottom: 1px dashed rgba(26,26,26,0.1);
+}
+.item-header {
+    display: flex; justify-content: space-between; margin-bottom: 0.2rem;
+}
+.item-header .name { font-weight: 700; font-family: var(--font-header); font-size: 1.3rem; }
+.item-header .price { color: var(--accent-red); font-weight: 600; }
+.desc { font-size: 0.95rem; opacity: 0.8; }
+
+/* Tandoor Split */
+.tandoor-bread-split {
+    display: grid; grid-template-columns: 1fr 1fr; gap: 4rem;
+    border-top: 2px solid var(--accent-gold);
+    padding-top: 3rem;
+}
+.tandoor h3, .bread h3 {
+    font-family: var(--font-header); font-size: 2rem; margin-bottom: 1.5rem; color: var(--text-primary);
+}
+
+/* Enhancements */
+.menu-overlay {
+    background-color: #fffbf0; /* Warm paper tint */
+}
+.menu-item-row {
+    display: flex; justify-content: space-between; align-items: center; margin-bottom: 1rem;
+    font-family: var(--font-header); font-size: 1.2rem;
+}
+.dots { flex: 1; border-bottom: 1px dotted #ccc; margin: 0 1rem; position: relative; top: -5px; }
+
+/* Responsive Menu */
+@media (max-width: 900px) {
+    .starters-grid, .curry-section, .tandoor-bread-split {
+        grid-template-columns: 1fr;
+    }
+    .curry-hero-image { height: 300px; }
+    .dish-thumb { height: 250px; }
+}
