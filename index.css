@@ -2007,3 +2007,78 @@ body.menu-page-v4 {
         max-width: 100%;
     }
 }
+
+/* =========================================
+   MOBILE OPTIMIZATION (Speed & Layout)
+   ========================================= */
+
+@media (max-width: 768px) {
+
+    /* SPEED: Hide heavy video on mobile, show static image */
+    .hero-video {
+        display: none !important;
+    }
+
+    .hero-image-container {
+        background-image: url('gallery/web/IMG_6007.jpg');
+        background-size: cover;
+        background-position: center;
+    }
+
+    /* MENU V4 MOBILE ADAPTATION */
+    .menu-paper {
+        margin: 0 auto;
+        /* Remove negative overlap */
+        width: 100%;
+        max-width: 100%;
+        box-shadow: none;
+        /* Flat design for mobile */
+        border-radius: 0;
+        border: none;
+        padding: 2rem 1.5rem;
+    }
+
+    .menu-hero-v4 {
+        height: 40vh;
+        /* Shorter hero */
+        min-height: 250px;
+    }
+
+    .menu-hero-v4 h1 {
+        font-size: 3rem;
+        /* Smaller title */
+    }
+
+    .category-title {
+        font-size: 2rem;
+        margin-top: 1rem;
+    }
+
+    /* Compact Menu Items */
+    .menu-items li {
+        margin-bottom: 1.2rem;
+    }
+
+    .item-top {
+        margin-bottom: 0.1rem;
+    }
+
+    .item-top .name {
+        font-size: 1.1rem;
+        padding-right: 0.5rem;
+    }
+
+    .item-top .price {
+        font-size: 1rem;
+        padding-left: 0.5rem;
+    }
+
+    .desc {
+        font-size: 0.9rem;
+        line-height: 1.4;
+    }
+
+    .section-divider {
+        margin: 2rem 0;
+    }
+}
