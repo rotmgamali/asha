@@ -3,27 +3,28 @@ document.addEventListener('DOMContentLoaded', () => {
     // ===== 1. PREMIUM LOADING SCREEN =====
     const loader = document.getElementById('loader');
 
-    // Hide loader after page fully loads
-    // Hide loader after a set time, regardless of full page load
-    const hideLoader = () => {
-        if (!loader.classList.contains('hidden')) {
-            loader.classList.add('hidden');
-            document.body.style.overflow = ''; // Re-enable scrolling
+    if (loader) {
+        // Hide loader after a set time
+        const hideLoader = () => {
+            if (!loader.classList.contains('hidden')) {
+                loader.classList.add('hidden');
+                document.body.style.overflow = ''; // Re-enable scrolling
+            }
+        };
+
+        // Check if page is already loaded (e.g. from cache or defer)
+        if (document.readyState === 'complete') {
+            setTimeout(hideLoader, 1000);
+        } else {
+            window.addEventListener('load', () => setTimeout(hideLoader, 1000));
         }
-    };
 
-    // Check if page is already loaded (e.g. from cache or defer)
-    if (document.readyState === 'complete') {
-        setTimeout(hideLoader, 1500);
-    } else {
-        window.addEventListener('load', () => setTimeout(hideLoader, 1500));
+        // Safety net: force hide after 2.5 seconds if window.load hangs
+        setTimeout(hideLoader, 2500);
+
+        // Prevent scrolling during load
+        document.body.style.overflow = 'hidden';
     }
-
-    // Safety net: force hide after 3.5 seconds if window.load hangs
-    setTimeout(hideLoader, 3500);
-
-    // Prevent scrolling during load
-    document.body.style.overflow = 'hidden';
 
     // ===== 2. HEADER SCROLL EFFECT =====
     const header = document.querySelector('.main-header');
