@@ -4,12 +4,21 @@ document.addEventListener('DOMContentLoaded', () => {
     const loader = document.getElementById('loader');
 
     // Hide loader after page fully loads
-    window.addEventListener('load', () => {
-        setTimeout(() => {
+    // Hide loader after a set time, regardless of full page load
+    const hideLoader = () => {
+        if (!loader.classList.contains('hidden')) {
             loader.classList.add('hidden');
             document.body.style.overflow = ''; // Re-enable scrolling
-        }, 1500); // Show loader for at least 1.5 seconds for effect
+        }
+    };
+
+    // Try to hide when loaded, but force hide after 3.5s max
+    window.addEventListener('load', () => {
+        setTimeout(hideLoader, 1500); // Minimum 1.5s show
     });
+
+    // Safety net: force hide after 3.5 seconds if window.load hangs
+    setTimeout(hideLoader, 3500);
 
     // Prevent scrolling during load
     document.body.style.overflow = 'hidden';
