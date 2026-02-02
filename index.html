@@ -96,6 +96,18 @@
         </div>
     </div>
 
+    <!-- INLINE FAILSAFE: Force hide loader if JS hangs or fails -->
+    <script>
+        setTimeout(function () {
+            var loader = document.getElementById('loader');
+            if (loader && !loader.classList.contains('hidden')) {
+                loader.classList.add('hidden');
+                document.body.style.overflow = '';
+                console.warn('Loader force-hidden by inline failsafe');
+            }
+        }, 3500);
+    </script>
+
     <header class="main-header">
         <div class="logo">
             <a href="#home" class="logo-link">
