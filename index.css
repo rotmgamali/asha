@@ -1242,6 +1242,16 @@ a {
     justify-content: center;
     z-index: 10000;
     transition: opacity 0.8s ease, visibility 0.8s ease;
+    /* CSS Failsafe: Force hide after 1 second */
+    animation: forceHide 0s linear 1s forwards;
+}
+
+@keyframes forceHide {
+    to {
+        opacity: 0;
+        visibility: hidden;
+        pointer-events: none;
+    }
 }
 
 .loader.hidden {
