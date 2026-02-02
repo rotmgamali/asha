@@ -12,10 +12,12 @@ document.addEventListener('DOMContentLoaded', () => {
         }
     };
 
-    // Try to hide when loaded, but force hide after 3.5s max
-    window.addEventListener('load', () => {
-        setTimeout(hideLoader, 1500); // Minimum 1.5s show
-    });
+    // Check if page is already loaded (e.g. from cache or defer)
+    if (document.readyState === 'complete') {
+        setTimeout(hideLoader, 1500);
+    } else {
+        window.addEventListener('load', () => setTimeout(hideLoader, 1500));
+    }
 
     // Safety net: force hide after 3.5 seconds if window.load hangs
     setTimeout(hideLoader, 3500);
