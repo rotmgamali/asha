@@ -19,30 +19,7 @@
 </head>
 
 <body class="menu-page">
-    <!-- Premium Loading Screen -->
-    <div id="loader" class="loader">
-        <div class="loader-content">
-            <svg class="loader-icon" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 100 100" fill="none">
-                <circle cx="50" cy="50" r="45" stroke="#D4AF37" stroke-width="2" opacity="0.5" />
-                <path d="M50 20 C60 35 80 40 80 60 C80 80 60 85 50 90 C40 85 20 80 20 60 C20 40 40 35 50 20 Z"
-                    fill="#A52A2A" stroke="#D4AF37" stroke-width="1.5" />
-                <path d="M50 30 C55 45 60 55 50 80 C40 55 45 45 50 30" fill="#D4AF37" opacity="0.8" />
-            </svg>
-            <span class="loader-text">ASHA</span>
-        </div>
-    </div>
 
-    <!-- INLINE FAILSAFE: Force hide loader if JS hangs or fails -->
-    <script>
-        setTimeout(function () {
-            var loader = document.getElementById('loader');
-            if (loader && !loader.classList.contains('hidden')) {
-                loader.classList.add('hidden');
-                document.body.style.overflow = '';
-                console.warn('Loader force-hidden by inline failsafe');
-            }
-        }, 3500);
-    </script>
 
     <!-- Header (Consistent) -->
     <header class="main-header solid-header">
@@ -521,8 +498,13 @@
         </div>
     </footer>
 
-    <!-- Main JS -->
-    <script src="main.js" defer></script>
+    <!-- Mobile Menu JS -->
+    <script>
+        document.getElementById('mobile-toggle').addEventListener('click', function () {
+            this.classList.toggle('active');
+            document.querySelector('.nav-links').classList.toggle('active');
+        });
+    </script>
 </body>
 
 </html>
