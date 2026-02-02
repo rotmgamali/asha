@@ -5,7 +5,7 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Menu | ASHA Indian Restaurant</title>
-    <meta name="description" content="Explore the full menu at ASHA. Authentic Indian cuisine in Phu Quoc.">
+    <meta name="description" content="Our curated menu of authentic Indian flavors.">
 
     <!-- Google Fonts -->
     <link rel="preconnect" href="https://fonts.googleapis.com">
@@ -17,11 +17,12 @@
     <link rel="stylesheet" href="index.css">
 </head>
 
-<body class="menu-page-v3">
-    <!-- Header -->
-    <header class="main-header solid-header">
+<body class="menu-page-v4">
+    <!-- Header: Explicitly Solid & Visible -->
+    <header class="main-header solid-header-v4">
         <div class="logo">
             <a href="index.html" class="logo-link">
+                <!-- Using simple text logo for elegance or existing SVG -->
                 <svg class="brand-icon" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 100 100" fill="none">
                     <circle cx="50" cy="50" r="45" stroke="#D4AF37" stroke-width="2" opacity="0.5" />
                     <path d="M50 20 C60 35 80 40 80 60 C80 80 60 85 50 90 C40 85 20 80 20 60 C20 40 40 35 50 20 Z"
@@ -46,524 +47,357 @@
     </header>
 
     <main>
-        <!-- Menu Hero -->
-        <section class="menu-hero-v3" style="background-image: url('asha_food_spread_premium_1769599476536.png');">
-            <div class="hero-overlay"></div>
+        <!-- Minimalist Hero -->
+        <section class="menu-hero-v4">
             <div class="hero-content">
                 <h1>The Menu</h1>
-                <p class="hero-subtitle">Authentic Flavors, Crafted with Soul</p>
+                <div class="separator-line"></div>
+                <p>Authentic Flavors</p>
             </div>
+            <!-- Background Image with Heavy Vignette -->
+            <div class="hero-bg" style="background-image: url('asha_food_spread_premium_1769599476536.png');"></div>
         </section>
 
-        <div class="menu-wrapper">
+        <!-- Single Column Elegant Container -->
+        <article class="menu-paper">
 
-            <!-- SECTION 1: STARTERS (Image Left / Content Right) -->
-            <section class="split-section">
-                <div class="split-image">
-                    <img src="asha_starter_samosa_1769609134476.png" alt="Samosa Starters">
-                </div>
-                <div class="split-content">
-                    <h2 class="section-title">Snacks & Starters</h2>
-                    <ul class="menu-list-classic">
-                        <li>
-                            <div class="item-name">1. French Fries</div>
-                            <div class="item-dots"></div>
-                            <div class="item-price">60.000₫</div>
-                        </li>
-                        <li class="item-desc">Allumette-cut deep-fried potatoes</li>
-
-                        <li>
-                            <div class="item-name">2. Veg Pakora (8 Pcs)</div>
-                            <div class="item-dots"></div>
-                            <div class="item-price">90.000₫</div>
-                        </li>
-                        <li class="item-desc">Mixed vegetables dipped in chickpea batter</li>
-
-                        <li>
-                            <div class="item-name">3. Gobi Pakora (8 Pcs)</div>
-                            <div class="item-dots"></div>
-                            <div class="item-price">100.000₫</div>
-                        </li>
-                        <li class="item-desc">Fresh cauliflower dipped in gram flour batter & deep fried</li>
-
-                        <li>
-                            <div class="item-name">4. Paneer Pakora (8 Pcs)</div>
-                            <div class="item-dots"></div>
-                            <div class="item-price">180.000₫</div>
-                        </li>
-                        <li class="item-desc">Homemade paneer dipped with batter & fried</li>
-
-                        <li>
-                            <div class="item-name">5. Chicken Pakora (8 Pcs)</div>
-                            <div class="item-dots"></div>
-                            <div class="item-price">180.000₫</div>
-                        </li>
-                        <li class="item-desc">Chicken dipped in chickpea batter & fried</li>
-                    </ul>
-                </div>
+            <!-- CATEGORY: STARTERS -->
+            <section class="menu-section">
+                <h2 class="category-title">Starters</h2>
+                <ul class="menu-items">
+                    <li>
+                        <div class="item-top"><span class="name">French Fries</span><span class="price">60.000₫</span>
+                        </div>
+                        <div class="desc">Allumette-cut deep-fried potatoes</div>
+                    </li>
+                    <li>
+                        <div class="item-top"><span class="name">Veg Pakora (8 Pcs)</span><span
+                                class="price">90.000₫</span></div>
+                        <div class="desc">Mixed vegetables dipped in chickpea batter</div>
+                    </li>
+                    <li>
+                        <div class="item-top"><span class="name">Gobi Pakora (8 Pcs)</span><span
+                                class="price">100.000₫</span></div>
+                        <div class="desc">Fresh cauliflower dipped in gram flour batter & deep fried</div>
+                    </li>
+                    <li>
+                        <div class="item-top"><span class="name">Paneer Pakora (8 Pcs)</span><span
+                                class="price">180.000₫</span></div>
+                        <div class="desc">Homemade paneer dipped with batter & fried</div>
+                    </li>
+                    <li>
+                        <div class="item-top"><span class="name">Chicken Pakora (8 Pcs)</span><span
+                                class="price">180.000₫</span></div>
+                        <div class="desc">Chicken dipped in chickpea batter & fried</div>
+                    </li>
+                </ul>
             </section>
 
-            <!-- SECTION 2: VEGETARIAN & PANEER (Grid Text) -->
-            <section class="grid-section">
-                <div class="grid-column">
-                    <h2 class="section-title-small">Vegetarian Curries</h2>
-                    <ul class="menu-list-classic simple">
-                        <li>
-                            <div class="item-name">6. Mixed Veg Curry</div>
-                            <div class="item-dots"></div>
-                            <div class="item-price">150.000₫</div>
-                        </li>
-                        <li>
-                            <div class="item-name">7. Dal Tadka</div>
-                            <div class="item-dots"></div>
-                            <div class="item-price">130.000₫</div>
-                        </li>
-                        <li>
-                            <div class="item-name">8. Dal Makhani</div>
-                            <div class="item-dots"></div>
-                            <div class="item-price">150.000₫</div>
-                        </li>
-                        <li>
-                            <div class="item-name">9. Aloo Matar</div>
-                            <div class="item-dots"></div>
-                            <div class="item-price">140.000₫</div>
-                        </li>
-                        <li>
-                            <div class="item-name">10. Chana Masala</div>
-                            <div class="item-dots"></div>
-                            <div class="item-price">150.000₫</div>
-                        </li>
-                        <li>
-                            <div class="item-name">11. Jeera Aloo</div>
-                            <div class="item-dots"></div>
-                            <div class="item-price">130.000₫</div>
-                        </li>
-                    </ul>
-                </div>
-                <div class="grid-column">
-                    <h2 class="section-title-small">Paneer Specialties</h2>
-                    <ul class="menu-list-classic simple">
-                        <li>
-                            <div class="item-name">12. Paneer Butter Masala</div>
-                            <div class="item-dots"></div>
-                            <div class="item-price">160.000₫</div>
-                        </li>
-                        <li>
-                            <div class="item-name">13. Paneer Shahi</div>
-                            <div class="item-dots"></div>
-                            <div class="item-price">160.000₫</div>
-                        </li>
-                        <li>
-                            <div class="item-name">14. Paneer Lababdar</div>
-                            <div class="item-dots"></div>
-                            <div class="item-price">160.000₫</div>
-                        </li>
-                        <li>
-                            <div class="item-name">15. Paneer Kadai</div>
-                            <div class="item-dots"></div>
-                            <div class="item-price">170.000₫</div>
-                        </li>
-                        <li>
-                            <div class="item-name">16. Paneer Bhurji</div>
-                            <div class="item-dots"></div>
-                            <div class="item-price">170.000₫</div>
-                        </li>
-                        <li>
-                            <div class="item-name">17. Paneer Maratha</div>
-                            <div class="item-dots"></div>
-                            <div class="item-price">170.000₫</div>
-                        </li>
-                    </ul>
-                </div>
+            <div class="section-divider">◆</div>
+
+            <!-- CATEGORY: VEGETARIAN CURRIES -->
+            <section class="menu-section">
+                <h2 class="category-title">Vegetarian Curries</h2>
+                <ul class="menu-items">
+                    <li>
+                        <div class="item-top"><span class="name">Mixed Veg Curry</span><span
+                                class="price">150.000₫</span></div>
+                    </li>
+                    <li>
+                        <div class="item-top"><span class="name">Dal Tadka</span><span class="price">130.000₫</span>
+                        </div>
+                    </li>
+                    <li>
+                        <div class="item-top"><span class="name">Dal Makhani</span><span class="price">150.000₫</span>
+                        </div>
+                    </li>
+                    <li>
+                        <div class="item-top"><span class="name">Aloo Matar</span><span class="price">140.000₫</span>
+                        </div>
+                    </li>
+                    <li>
+                        <div class="item-top"><span class="name">Chana Masala</span><span class="price">150.000₫</span>
+                        </div>
+                    </li>
+                    <li>
+                        <div class="item-top"><span class="name">Jeera Aloo</span><span class="price">130.000₫</span>
+                        </div>
+                    </li>
+                </ul>
             </section>
 
-            <!-- SECTION 3: CHICKEN MAINS (Content Left / Image Right) -->
-            <section class="split-section reverse">
-                <div class="split-content">
-                    <h2 class="section-title">Chicken Mains</h2>
-                    <p class="section-subtitle">Boneless • 6 Pieces per serving</p>
-                    <ul class="menu-list-classic">
-                        <li>
-                            <div class="item-name">18. Chicken Curry</div>
-                            <div class="item-dots"></div>
-                            <div class="item-price">160.000₫</div>
-                        </li>
-                        <li>
-                            <div class="item-name">19. Butter Chicken</div>
-                            <div class="item-dots"></div>
-                            <div class="item-price">170.000₫</div>
-                        </li>
-                        <li>
-                            <div class="item-name">20. Kadai Chicken</div>
-                            <div class="item-dots"></div>
-                            <div class="item-price">180.000₫</div>
-                        </li>
-                        <li>
-                            <div class="item-name">21. Chicken Masala</div>
-                            <div class="item-dots"></div>
-                            <div class="item-price">170.000₫</div>
-                        </li>
-                    </ul>
-                    <br>
-                    <h2 class="section-title">Chicken Rice & Biryani</h2>
-                    <ul class="menu-list-classic">
-                        <li>
-                            <div class="item-name">22. Chicken Biryani (6 Pcs)</div>
-                            <div class="item-dots"></div>
-                            <div class="item-price">180.000₫</div>
-                        </li>
-                        <li>
-                            <div class="item-name">23. Chicken Fried Rice</div>
-                            <div class="item-dots"></div>
-                            <div class="item-price">160.000₫</div>
-                        </li>
-                    </ul>
-                </div>
-                <div class="split-image">
-                    <img src="asha_curry_butter_chicken_1769610087947.png" alt="Butter Chicken">
-                </div>
+            <div class="section-divider">◆</div>
+
+            <!-- CATEGORY: PANEER -->
+            <section class="menu-section">
+                <h2 class="category-title">Paneer Specialties</h2>
+                <ul class="menu-items">
+                    <li>
+                        <div class="item-top"><span class="name">Paneer Butter Masala</span><span
+                                class="price">160.000₫</span></div>
+                    </li>
+                    <li>
+                        <div class="item-top"><span class="name">Paneer Shahi</span><span class="price">160.000₫</span>
+                        </div>
+                    </li>
+                    <li>
+                        <div class="item-top"><span class="name">Paneer Lababdar</span><span
+                                class="price">160.000₫</span></div>
+                    </li>
+                    <li>
+                        <div class="item-top"><span class="name">Paneer Kadai</span><span class="price">170.000₫</span>
+                        </div>
+                    </li>
+                    <li>
+                        <div class="item-top"><span class="name">Paneer Bhurji</span><span class="price">170.000₫</span>
+                        </div>
+                    </li>
+                    <li>
+                        <div class="item-top"><span class="name">Paneer Maratha</span><span
+                                class="price">170.000₫</span></div>
+                    </li>
+                </ul>
             </section>
 
-            <!-- SECTION 4: SIDES, RICE & BREADS (3-Column Grid) -->
-            <section class="grid-section three-col">
-                <div class="grid-column">
-                    <h2 class="section-title-small">Rice & Breads</h2>
-                    <ul class="menu-list-classic simple">
-                        <li>
-                            <div class="item-name">24. Plain Rice</div>
-                            <div class="item-dots"></div>
-                            <div class="item-price">70.000₫</div>
-                        </li>
-                        <li>
-                            <div class="item-name">25. Tomato Rice</div>
-                            <div class="item-dots"></div>
-                            <div class="item-price">90.000₫</div>
-                        </li>
-                        <li>
-                            <div class="item-name">26. Curd Rice</div>
-                            <div class="item-dots"></div>
-                            <div class="item-price">120.000₫</div>
-                        </li>
-                        <li>
-                            <div class="item-name">27. Jeera Rice</div>
-                            <div class="item-dots"></div>
-                            <div class="item-price">80.000₫</div>
-                        </li>
-                        <li>
-                            <div class="item-name">28. Veg Fried Rice</div>
-                            <div class="item-dots"></div>
-                            <div class="item-price">130.000₫</div>
-                        </li>
-                        <li>
-                            <div class="item-name">29. Veg Biryani</div>
-                            <div class="item-dots"></div>
-                            <div class="item-price">170.000₫</div>
-                        </li>
-                        <li class="separator"></li>
-                        <li>
-                            <div class="item-name">34. Tawa Roti</div>
-                            <div class="item-dots"></div>
-                            <div class="item-price">40.000₫</div>
-                        </li>
-                        <li>
-                            <div class="item-name">35. Plain Paratha</div>
-                            <div class="item-dots"></div>
-                            <div class="item-price">50.000₫</div>
-                        </li>
-                        <li>
-                            <div class="item-name">36. Aloo Paratha</div>
-                            <div class="item-dots"></div>
-                            <div class="item-price">80.000₫</div>
-                        </li>
-                        <li>
-                            <div class="item-name">37. Gobi Paratha</div>
-                            <div class="item-dots"></div>
-                            <div class="item-price">90.000₫</div>
-                        </li>
-                        <li>
-                            <div class="item-name">38. Paneer Paratha</div>
-                            <div class="item-dots"></div>
-                            <div class="item-price">130.000₫</div>
-                        </li>
-                    </ul>
-                </div>
-                <div class="grid-column">
-                    <h2 class="section-title-small">Eggs & Soup</h2>
-                    <ul class="menu-list-classic simple">
-                        <li>
-                            <div class="item-name">30. Egg Fried Rice</div>
-                            <div class="item-dots"></div>
-                            <div class="item-price">170.000₫</div>
-                        </li>
-                        <li>
-                            <div class="item-name">31. Egg Biryani</div>
-                            <div class="item-dots"></div>
-                            <div class="item-price">180.000₫</div>
-                        </li>
-                        <li>
-                            <div class="item-name">32. Omelet (2 eggs)</div>
-                            <div class="item-dots"></div>
-                            <div class="item-price">70.000₫</div>
-                        </li>
-                        <li>
-                            <div class="item-name">33. Egg Bhurji (3 eggs)</div>
-                            <div class="item-dots"></div>
-                            <div class="item-price">100.000₫</div>
-                        </li>
-                        <li class="separator"></li>
-                        <li>
-                            <div class="item-name">39. Veg Soup</div>
-                            <div class="item-dots"></div>
-                            <div class="item-price">80.000₫</div>
-                        </li>
-                        <li>
-                            <div class="item-name">40. Tomato Soup</div>
-                            <div class="item-dots"></div>
-                            <div class="item-price">80.000₫</div>
-                        </li>
-                        <li>
-                            <div class="item-name">41. Chicken Soup</div>
-                            <div class="item-dots"></div>
-                            <div class="item-price">110.000₫</div>
-                        </li>
-                    </ul>
-                </div>
-                <div class="grid-column">
-                    <h2 class="section-title-small">Salads & Tandoor</h2>
-                    <ul class="menu-list-classic simple">
-                        <li>
-                            <div class="item-name">42. Onion Salad</div>
-                            <div class="item-dots"></div>
-                            <div class="item-price">20.000₫</div>
-                        </li>
-                        <li>
-                            <div class="item-name">43. Mix Salad</div>
-                            <div class="item-dots"></div>
-                            <div class="item-price">60.000₫</div>
-                        </li>
-                        <li>
-                            <div class="item-name">44. Veg Raita</div>
-                            <div class="item-dots"></div>
-                            <div class="item-price">70.000₫</div>
-                        </li>
-                        <li>
-                            <div class="item-name">45. Plain Curd</div>
-                            <div class="item-dots"></div>
-                            <div class="item-price">30.000₫</div>
-                        </li>
-                        <li>
-                            <div class="item-name">46. Achar</div>
-                            <div class="item-dots"></div>
-                            <div class="item-price">10.000₫</div>
-                        </li>
-                        <li>
-                            <div class="item-name">47. Papadum (1 Pcs)</div>
-                            <div class="item-dots"></div>
-                            <div class="item-price">40.000₫</div>
-                        </li>
-                        <li class="separator"></li>
-                        <li>
-                            <div class="item-name">70. Tandoori Roti</div>
-                            <div class="item-dots"></div>
-                            <div class="item-price">40.000₫</div>
-                        </li>
-                        <li>
-                            <div class="item-name">71. Plain Naan</div>
-                            <div class="item-dots"></div>
-                            <div class="item-price">50.000₫</div>
-                        </li>
-                        <li>
-                            <div class="item-name">72. Butter Naan</div>
-                            <div class="item-dots"></div>
-                            <div class="item-price">60.000₫</div>
-                        </li>
-                        <li>
-                            <div class="item-name">73. Garlic Butter Naan</div>
-                            <div class="item-dots"></div>
-                            <div class="item-price">70.000₫</div>
-                        </li>
-                        <li>
-                            <div class="item-name">74. Cheese Naan</div>
-                            <div class="item-dots"></div>
-                            <div class="item-price">80.000₫</div>
-                        </li>
-                        <li>
-                            <div class="item-name">75. Aloo Naan</div>
-                            <div class="item-dots"></div>
-                            <div class="item-price">80.000₫</div>
-                        </li>
-                        <li>
-                            <div class="item-name">76. Laccha Paratha</div>
-                            <div class="item-dots"></div>
-                            <div class="item-price">60.000₫</div>
-                        </li>
-                    </ul>
-                </div>
+            <div class="section-divider">◆</div>
+
+            <!-- CATEGORY: CHICKEN MAINS -->
+            <section class="menu-section">
+                <h2 class="category-title">Chicken Mains</h2>
+                <p class="category-sub">Boneless • 6 Pieces</p>
+                <ul class="menu-items">
+                    <li>
+                        <div class="item-top"><span class="name">Chicken Curry</span><span class="price">160.000₫</span>
+                        </div>
+                    </li>
+                    <li>
+                        <div class="item-top"><span class="name">Butter Chicken</span><span
+                                class="price">170.000₫</span></div>
+                    </li>
+                    <li>
+                        <div class="item-top"><span class="name">Kadai Chicken</span><span class="price">180.000₫</span>
+                        </div>
+                    </li>
+                    <li>
+                        <div class="item-top"><span class="name">Chicken Masala</span><span
+                                class="price">170.000₫</span></div>
+                    </li>
+                </ul>
             </section>
 
-            <!-- SECTION 5: SPECIALS (Image Left / Content Right) -->
-            <section class="split-section">
-                <div class="split-image">
-                    <img src="asha_interior_lanterns_vibe_1769599497243.png" alt="Chef Specials">
-                </div>
-                <div class="split-content">
-                    <h2 class="section-title">Chef Specials</h2>
-                    <ul class="menu-list-classic">
-                        <li>
-                            <div class="item-name">48. Panipuri</div>
-                            <div class="item-dots"></div>
-                            <div class="item-price">110.000₫</div>
-                        </li>
-                        <li>
-                            <div class="item-name">49. Egg Chilli</div>
-                            <div class="item-dots"></div>
-                            <div class="item-price">160.000₫</div>
-                        </li>
-                        <li>
-                            <div class="item-name">50. Paneer Chilli</div>
-                            <div class="item-dots"></div>
-                            <div class="item-price">160.000₫</div>
-                        </li>
-                        <li>
-                            <div class="item-name">51. Veg Samosa (2 Pcs)</div>
-                            <div class="item-dots"></div>
-                            <div class="item-price">90.000₫</div>
-                        </li>
-                        <li>
-                            <div class="item-name">52. Mashed Potato</div>
-                            <div class="item-dots"></div>
-                            <div class="item-price">60.000₫</div>
-                        </li>
-                        <li>
-                            <div class="item-name">53. Dosa (Masala)</div>
-                            <div class="item-dots"></div>
-                            <div class="item-price">140.000₫</div>
-                        </li>
-                        <li>
-                            <div class="item-name">54. Mushroom Kadai</div>
-                            <div class="item-dots"></div>
-                            <div class="item-price">170.000₫</div>
-                        </li>
-                        <li>
-                            <div class="item-name">55. Kurkuri Bhindi</div>
-                            <div class="item-dots"></div>
-                            <div class="item-price">150.000₫</div>
-                        </li>
-                        <li>
-                            <div class="item-name">56. Idli (4 Pcs)</div>
-                            <div class="item-dots"></div>
-                            <div class="item-price">140.000₫</div>
-                        </li>
-                    </ul>
-                </div>
+            <div class="section-divider">◆</div>
+
+            <!-- CATEGORY: RICE & BIRYANI -->
+            <section class="menu-section">
+                <h2 class="category-title">Rice & Biryani</h2>
+                <ul class="menu-items">
+                    <li>
+                        <div class="item-top"><span class="name">Chicken Biryani (6 Pcs)</span><span
+                                class="price">180.000₫</span></div>
+                    </li>
+                    <li>
+                        <div class="item-top"><span class="name">Chicken Fried Rice</span><span
+                                class="price">160.000₫</span></div>
+                    </li>
+                    <li>
+                        <div class="item-top"><span class="name">Plain Rice</span><span class="price">70.000₫</span>
+                        </div>
+                    </li>
+                    <li>
+                        <div class="item-top"><span class="name">Tomato Rice</span><span class="price">90.000₫</span>
+                        </div>
+                    </li>
+                    <li>
+                        <div class="item-top"><span class="name">Curd Rice</span><span class="price">120.000₫</span>
+                        </div>
+                    </li>
+                    <li>
+                        <div class="item-top"><span class="name">Jeera Rice</span><span class="price">80.000₫</span>
+                        </div>
+                    </li>
+                    <li>
+                        <div class="item-top"><span class="name">Veg Fried Rice</span><span
+                                class="price">130.000₫</span></div>
+                    </li>
+                    <li>
+                        <div class="item-top"><span class="name">Vegetables Biryani</span><span
+                                class="price">170.000₫</span></div>
+                    </li>
+                    <li>
+                        <div class="item-top"><span class="name">Egg Fried Rice</span><span
+                                class="price">170.000₫</span></div>
+                    </li>
+                    <li>
+                        <div class="item-top"><span class="name">Egg Biryani</span><span class="price">180.000₫</span>
+                        </div>
+                    </li>
+                </ul>
             </section>
 
-            <!-- SECTION 6: INDO-WESTERN & SEAFOOD (Grid Text) -->
-            <section class="grid-section">
-                <div class="grid-column">
-                    <h2 class="section-title-small">Indo-Western Fusion</h2>
-                    <ul class="menu-list-classic simple">
-                        <li>
-                            <div class="item-name">57. Chicken Chilli</div>
-                            <div class="item-dots"></div>
-                            <div class="item-price">170.000₫</div>
-                        </li>
-                        <li>
-                            <div class="item-name">58. Chicken Egg Rolls</div>
-                            <div class="item-dots"></div>
-                            <div class="item-price">160.000₫</div>
-                        </li>
-                        <li>
-                            <div class="item-name">59. Chicken Tikka</div>
-                            <div class="item-dots"></div>
-                            <div class="item-price">160.000₫</div>
-                        </li>
-                        <li>
-                            <div class="item-name">60. Pepper Shrimp</div>
-                            <div class="item-dots"></div>
-                            <div class="item-price">150.000₫</div>
-                        </li>
-                        <li>
-                            <div class="item-name">61. Fish Finger</div>
-                            <div class="item-dots"></div>
-                            <div class="item-price">150.000₫</div>
-                        </li>
-                        <li>
-                            <div class="item-name">62. Kung Pao Chicken</div>
-                            <div class="item-dots"></div>
-                            <div class="item-price">160.000₫</div>
-                        </li>
-                        <li>
-                            <div class="item-name">63. Crusted Chicken</div>
-                            <div class="item-dots"></div>
-                            <div class="item-price">160.000₫</div>
-                        </li>
-                        <li>
-                            <div class="item-name">64. Fettuccine Alfredo</div>
-                            <div class="item-dots"></div>
-                            <div class="item-price">160.000₫</div>
-                        </li>
-                        <li>
-                            <div class="item-name">65. Thai Basil Chicken</div>
-                            <div class="item-dots"></div>
-                            <div class="item-price">160.000₫</div>
-                        </li>
-                    </ul>
-                </div>
-                <div class="grid-column">
-                    <h2 class="section-title-small">Seafood & Kababs</h2>
-                    <ul class="menu-list-classic simple">
-                        <li>
-                            <div class="item-name">66. Fish and Chips</div>
-                            <div class="item-dots"></div>
-                            <div class="item-price">150.000₫</div>
-                        </li>
-                        <li>
-                            <div class="item-name">67. Garlic Butter Shrimp</div>
-                            <div class="item-dots"></div>
-                            <div class="item-price">160.000₫</div>
-                        </li>
-                        <li>
-                            <div class="item-name">68. Crispy Fried Shrimp</div>
-                            <div class="item-dots"></div>
-                            <div class="item-price">160.000₫</div>
-                        </li>
-                        <li>
-                            <div class="item-name">69. Spicy Chili Shrimp</div>
-                            <div class="item-dots"></div>
-                            <div class="item-price">170.000₫</div>
-                        </li>
-                        <li class="separator"></li>
-                        <li>
-                            <div class="item-name">77. Paneer Tikka</div>
-                            <div class="item-dots"></div>
-                            <div class="item-price">160.000₫</div>
-                        </li>
-                        <li>
-                            <div class="item-name">78. Malai Paneer Tikka</div>
-                            <div class="item-dots"></div>
-                            <div class="item-price">180.000₫</div>
-                        </li>
-                        <li>
-                            <div class="item-name">79. Veg Seekh Kebab</div>
-                            <div class="item-dots"></div>
-                            <div class="item-price">160.000₫</div>
-                        </li>
-                        <li>
-                            <div class="item-name">80. Chicken Malai Kebab</div>
-                            <div class="item-dots"></div>
-                            <div class="item-price">180.000₫</div>
-                        </li>
-                        <li>
-                            <div class="item-name">81. Chicken Tikka</div>
-                            <div class="item-dots"></div>
-                            <div class="item-price">160.000₫</div>
-                        </li>
-                    </ul>
-                </div>
+            <div class="section-divider">◆</div>
+
+            <!-- CATEGORY: BREADS -->
+            <section class="menu-section">
+                <h2 class="category-title">Tandoor Breads</h2>
+                <ul class="menu-items">
+                    <li>
+                        <div class="item-top"><span class="name">Tandoori Roti</span><span class="price">40.000₫</span>
+                        </div>
+                    </li>
+                    <li>
+                        <div class="item-top"><span class="name">Plain Naan</span><span class="price">50.000₫</span>
+                        </div>
+                    </li>
+                    <li>
+                        <div class="item-top"><span class="name">Butter Naan</span><span class="price">60.000₫</span>
+                        </div>
+                    </li>
+                    <li>
+                        <div class="item-top"><span class="name">Garlic Butter Naan</span><span
+                                class="price">70.000₫</span></div>
+                    </li>
+                    <li>
+                        <div class="item-top"><span class="name">Cheese Naan</span><span class="price">80.000₫</span>
+                        </div>
+                    </li>
+                    <li>
+                        <div class="item-top"><span class="name">Aloo Naan</span><span class="price">80.000₫</span>
+                        </div>
+                    </li>
+                    <li>
+                        <div class="item-top"><span class="name">Laccha Paratha</span><span class="price">60.000₫</span>
+                        </div>
+                    </li>
+                    <li>
+                        <div class="item-top"><span class="name">Tawa Roti</span><span class="price">40.000₫</span>
+                        </div>
+                    </li>
+                    <li>
+                        <div class="item-top"><span class="name">Plain Paratha</span><span class="price">50.000₫</span>
+                        </div>
+                    </li>
+                    <li>
+                        <div class="item-top"><span class="name">Aloo Paratha</span><span class="price">80.000₫</span>
+                        </div>
+                    </li>
+                    <li>
+                        <div class="item-top"><span class="name">Gobi Paratha</span><span class="price">90.000₫</span>
+                        </div>
+                    </li>
+                    <li>
+                        <div class="item-top"><span class="name">Paneer Paratha</span><span
+                                class="price">130.000₫</span></div>
+                    </li>
+                </ul>
             </section>
 
-        </div>
+            <div class="section-divider">◆</div>
+
+            <!-- CATEGORY: CHEF SPECIALS -->
+            <section class="menu-section">
+                <h2 class="category-title">Chef Specials</h2>
+                <ul class="menu-items">
+                    <li>
+                        <div class="item-top"><span class="name">Panipuri</span><span class="price">110.000₫</span>
+                        </div>
+                    </li>
+                    <li>
+                        <div class="item-top"><span class="name">Egg Chilli</span><span class="price">160.000₫</span>
+                        </div>
+                    </li>
+                    <li>
+                        <div class="item-top"><span class="name">Paneer Chilli</span><span class="price">160.000₫</span>
+                        </div>
+                    </li>
+                    <li>
+                        <div class="item-top"><span class="name">Veg Samosa (2 Pcs)</span><span
+                                class="price">90.000₫</span></div>
+                    </li>
+                    <li>
+                        <div class="item-top"><span class="name">Mashed Potato</span><span class="price">60.000₫</span>
+                        </div>
+                    </li>
+                    <li>
+                        <div class="item-top"><span class="name">Dosa (Masala)</span><span class="price">140.000₫</span>
+                        </div>
+                    </li>
+                    <li>
+                        <div class="item-top"><span class="name">Mushroom Kadai</span><span
+                                class="price">170.000₫</span></div>
+                    </li>
+                    <li>
+                        <div class="item-top"><span class="name">Kurkuri Bhindi</span><span
+                                class="price">150.000₫</span></div>
+                    </li>
+                    <li>
+                        <div class="item-top"><span class="name">Idli (4 Pcs)</span><span class="price">140.000₫</span>
+                        </div>
+                    </li>
+                </ul>
+            </section>
+
+            <div class="section-divider">◆</div>
+
+            <!-- CATEGORY: INDO-WESTERN -->
+            <section class="menu-section">
+                <h2 class="category-title">Indo-Western & Seafood</h2>
+                <ul class="menu-items">
+                    <li>
+                        <div class="item-top"><span class="name">Chicken Chilli</span><span
+                                class="price">170.000₫</span></div>
+                    </li>
+                    <li>
+                        <div class="item-top"><span class="name">Chicken Egg Rolls</span><span
+                                class="price">160.000₫</span></div>
+                    </li>
+                    <li>
+                        <div class="item-top"><span class="name">Chicken Tikka</span><span class="price">160.000₫</span>
+                        </div>
+                    </li>
+                    <li>
+                        <div class="item-top"><span class="name">Pepper Shrimp</span><span class="price">150.000₫</span>
+                        </div>
+                    </li>
+                    <li>
+                        <div class="item-top"><span class="name">Fish Finger</span><span class="price">150.000₫</span>
+                        </div>
+                    </li>
+                    <li>
+                        <div class="item-top"><span class="name">Kung Pao Chicken</span><span
+                                class="price">160.000₫</span></div>
+                    </li>
+                    <li>
+                        <div class="item-top"><span class="name">Crusted Chicken</span><span
+                                class="price">160.000₫</span></div>
+                    </li>
+                    <li>
+                        <div class="item-top"><span class="name">Fettuccine Alfredo</span><span
+                                class="price">160.000₫</span></div>
+                    </li>
+                    <li>
+                        <div class="item-top"><span class="name">Thai Basil Chicken</span><span
+                                class="price">160.000₫</span></div>
+                    </li>
+                    <li>
+                        <div class="item-top"><span class="name">Fish and Chips</span><span
+                                class="price">150.000₫</span></div>
+                    </li>
+                    <li>
+                        <div class="item-top"><span class="name">Garlic Butter Shrimp</span><span
+                                class="price">160.000₫</span></div>
+                    </li>
+                    <li>
+                        <div class="item-top"><span class="name">Crispy Fried Shrimp</span><span
+                                class="price">160.000₫</span></div>
+                    </li>
+                    <li>
+                        <div class="item-top"><span class="name">Spicy Chili Shrimp</span><span
+                                class="price">170.000₫</span></div>
+                    </li>
+                </ul>
+            </section>
+
+        </article>
     </main>
 
     <footer class="main-footer">
