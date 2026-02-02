@@ -2,3 +2,6 @@
 *.log
 node_modules/
 .vscode/
+
+# Large Assets
+gallery/asha gallery/

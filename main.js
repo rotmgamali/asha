@@ -1,6 +1,20 @@
 document.addEventListener('DOMContentLoaded', () => {
 
-    // 1. Header Scroll Effect
+    // ===== 1. PREMIUM LOADING SCREEN =====
+    const loader = document.getElementById('loader');
+
+    // Hide loader after page fully loads
+    window.addEventListener('load', () => {
+        setTimeout(() => {
+            loader.classList.add('hidden');
+            document.body.style.overflow = ''; // Re-enable scrolling
+        }, 1500); // Show loader for at least 1.5 seconds for effect
+    });
+
+    // Prevent scrolling during load
+    document.body.style.overflow = 'hidden';
+
+    // ===== 2. HEADER SCROLL EFFECT =====
     const header = document.querySelector('.main-header');
     window.addEventListener('scroll', () => {
         if (window.scrollY > 50) {
@@ -10,7 +24,7 @@ document.addEventListener('DOMContentLoaded', () => {
         }
     });
 
-    // 2. Intersection Observer for Reveal Animations
+    // ===== 3. INTERSECTION OBSERVER FOR REVEAL ANIMATIONS =====
     const observerOptions = {
         threshold: 0.15,
         rootMargin: "0px"
@@ -25,13 +39,13 @@ document.addEventListener('DOMContentLoaded', () => {
         });
     }, observerOptions);
 
-    const revealElements = document.querySelectorAll('.reveal-text, .editorial-item, .collage-image, .collage-text');
+    // Observe all reveal elements
+    const revealElements = document.querySelectorAll('.reveal-text, .editorial-item, .collage-image, .collage-text, .content-section');
     revealElements.forEach(el => {
-        el.classList.add('reveal-text');
         observer.observe(el);
     });
 
-    // 3. Simple Parallax Effect
+    // ===== 4. SIMPLE PARALLAX EFFECT =====
     const parallaxImages = document.querySelectorAll('.parallax-img');
 
     window.addEventListener('scroll', () => {
@@ -40,33 +54,28 @@ document.addEventListener('DOMContentLoaded', () => {
         parallaxImages.forEach(el => {
             const speed = el.dataset.speed || 0.1;
             const yPos = -(scrolled * speed);
-            // Apply transform to the container or image wrapper if possible, 
-            // but here we might need to target the child if it's the background
-            // adaptation: let's move the element itself slightly
             el.style.transform = `translateY(${yPos}px)`;
         });
 
-        // Also subtle parallax for hero image
+        // Subtle parallax for hero image
         const heroImg = document.querySelector('.hero-image');
         if (heroImg) {
             heroImg.style.transform = `scale(1.1) translateY(${scrolled * 0.05}px)`;
         }
     });
 
-    // 4. Full Menu Toggle
+    // ===== 5. FULL MENU TOGGLE =====
     const menuOverlay = document.getElementById('menu-overlay');
     const closeMenuBtn = document.getElementById('close-menu');
-    // Find all buttons/links that should open the menu
-    const menuTriggers = document.querySelectorAll('a[href="#menu"], .text-link');
 
-    // Also bind to the specific "View Full Menu" text link we created 
-    // AND let's update the HTML anchor to be a cleaner trigger if needed.
+    // Only bind to specific menu triggers (not all text-links)
+    const menuTriggers = document.querySelectorAll('a[href="#menu"], .hero-description .cta-link, .editorial-item.text-block .text-link');
 
     menuTriggers.forEach(btn => {
         btn.addEventListener('click', (e) => {
             e.preventDefault();
             menuOverlay.classList.add('active');
-            document.body.style.overflow = 'hidden'; // Stop background scrolling
+            document.body.style.overflow = 'hidden';
         });
     });
 
@@ -77,7 +86,15 @@ document.addEventListener('DOMContentLoaded', () => {
         });
     }
 
-    // 5. Mobile Menu Toggle
+    // Close menu on Escape key
+    document.addEventListener('keydown', (e) => {
+        if (e.key === 'Escape' && menuOverlay.classList.contains('active')) {
+            menuOverlay.classList.remove('active');
+            document.body.style.overflow = '';
+        }
+    });
+
+    // ===== 6. MOBILE MENU TOGGLE =====
     const mobileToggle = document.getElementById('mobile-toggle');
     const navLinks = document.querySelector('.nav-links');
 
@@ -96,5 +113,122 @@ document.addEventListener('DOMContentLoaded', () => {
             });
         });
     }
+
+    // ===== 7. BACK TO TOP BUTTON =====
+    const backToTop = document.getElementById('back-to-top');
+
+    if (backToTop) {
+        // Show/hide button based on scroll position
+        window.addEventListener('scroll', () => {
+            if (window.scrollY > 600) {
+                backToTop.classList.add('visible');
+            } else {
+                backToTop.classList.remove('visible');
+            }
+        });
+
+        // Scroll to top on click
+        backToTop.addEventListener('click', () => {
+            window.scrollTo({
+                top: 0,
+                behavior: 'smooth'
+            });
+        });
+    }
+
+    // ===== 8. SMOOTH ANCHOR SCROLLING =====
+    document.querySelectorAll('a[href^="#"]').forEach(anchor => {
+        anchor.addEventListener('click', function (e) {
+            const targetId = this.getAttribute('href');
+
+            // Skip if it's the menu trigger or empty hash
+            if (targetId === '#menu' || targetId === '#') return;
+
+            const target = document.querySelector(targetId);
+            if (target) {
+                e.preventDefault();
+                const headerOffset = 80;
+                const elementPosition = target.getBoundingClientRect().top;
+                const offsetPosition = elementPosition + window.pageYOffset - headerOffset;
+
+                window.scrollTo({
+                    top: offsetPosition,
+                    behavior: 'smooth'
+                });
+            }
+        });
+    });
+
+    // ===== 9. MENU ITEM STAGGER ANIMATION =====
+    const menuItems = document.querySelectorAll('.menu-category li, .clean-list li');
+    menuItems.forEach((item, index) => {
+        item.style.transitionDelay = `${index * 50}ms`;
+    });
+
+    // ===== 10. IMAGE LAZY LOADING ENHANCEMENT =====
+    const lazyImages = document.querySelectorAll('.img-wrapper, .dish-thumb, .curry-hero-image');
+
+    const imageObserver = new IntersectionObserver((entries) => {
+        entries.forEach(entry => {
+            if (entry.isIntersecting) {
+                entry.target.classList.add('loaded');
+                imageObserver.unobserve(entry.target);
+            }
+        });
+    }, { threshold: 0.1 });
+
+});
+
+// ===== 11. SIMPLE LIGHTBOX =====
+const galleryItems = document.querySelectorAll('.gallery-item img');
+
+// Create lightbox elements
+const lightbox = document.createElement('div');
+lightbox.className = 'lightbox';
+lightbox.innerHTML = `
+        <button class="lightbox-close">&times;</button>
+        <div class="lightbox-content">
+            <img src="" alt="Gallery Preview">
+        </div>
+    `;
+document.body.appendChild(lightbox);
+
+const lightboxImg = lightbox.querySelector('img');
+const lightboxClose = lightbox.querySelector('.lightbox-close');
+
+// Open Lightbox
+galleryItems.forEach(item => {
+    item.addEventListener('click', () => {
+        const imgSrc = item.src;
+        lightboxImg.src = imgSrc;
+        lightbox.classList.add('active');
+        document.body.style.overflow = 'hidden';
+    });
+});
+
+// Close Lightbox functions
+const closeLightbox = () => {
+    lightbox.classList.remove('active');
+    document.body.style.overflow = '';
+    setTimeout(() => {
+        lightboxImg.src = '';
+    }, 300);
+};
+
+lightboxClose.addEventListener('click', closeLightbox);
+
+// Close on background click
+lightbox.addEventListener('click', (e) => {
+    if (e.target === lightbox || e.target.classList.contains('lightbox-content')) {
+        closeLightbox();
+    }
+});
+
+// Close on Escape key (already handled by global listener but specific for lightbox is good)
+document.addEventListener('keydown', (e) => {
+    if (e.key === 'Escape' && lightbox.classList.contains('active')) {
+        closeLightbox();
+    }
+});
 
 });
