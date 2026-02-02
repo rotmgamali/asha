@@ -241,5 +241,3 @@ document.addEventListener('keydown', (e) => {
         closeLightbox();
     }
 });
-
-});
