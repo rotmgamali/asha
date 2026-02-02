@@ -199,7 +199,7 @@ const lightboxClose = lightbox.querySelector('.lightbox-close');
 // Open Lightbox
 galleryItems.forEach(item => {
     item.addEventListener('click', () => {
-        const imgSrc = item.src;
+        const imgSrc = item.dataset.full || item.src;
         lightboxImg.src = imgSrc;
         lightbox.classList.add('active');
         document.body.style.overflow = 'hidden';
